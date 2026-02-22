@@ -1,2 +1,2 @@
-# cos-un.github.io
-cos-un Homepage
+# ADS-352
+Ders için örnek site oluşturma deposudur.
