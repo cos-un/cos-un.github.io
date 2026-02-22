@@ -3,101 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADS-352 Örnek Sitesi</title>
+    <title>ADS 352 Örnek Sitesi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        /* Temel Renkler ve Font Ayarları */
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #d32f2f; /* Tasarıma enerji katan kırmızı bir ton */
-            --bg-color: #f8f9fa;
-            --text-color: #333;
-        }
-        
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        /* Başlık (Header) Alanı */
-        header {
-            background-color: var(--primary-color);
-            color: white;
+            /* Görseldeki mor tona yakın bir arka plan rengi */
+            background-color: #6a4cff; 
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            padding: 4rem 2rem;
-            border-bottom: 5px solid var(--secondary-color);
+            overflow: hidden;
         }
 
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
+        .content {
+            max-width: 600px;
+            padding: 20px;
         }
 
-        header p {
-            font-size: 1.2rem;
-            font-weight: 300;
-            opacity: 0.9;
+        h1 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
         }
 
-        /* İçerik Konteyneri */
-        .container {
-            max-width: 900px;
-            margin: -2rem auto 2rem auto; /* Üst kısımla hafif iç içe geçme efekti */
-            padding: 0 2rem;
+        h2 {
+            font-size: 1.1rem;
+            font-weight: normal;
+            margin-bottom: 25px;
         }
 
-        /* Bölümler (Kart Görünümü) */
-        .section {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
         }
 
-        .section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        /* Butonların yan yana durması için container */
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
-        .section h2 {
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
+        /* Buton tasarımları */
+        .link-btn {
             display: flex;
             align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            background-color: transparent;
+            transition: background-color 0.3s, border-color 0.3s;
         }
 
-        .section h2::after {
-            content: "";
-            flex: 1;
-            height: 2px;
-            background: #eee;
-            margin-left: 15px;
+        .link-btn:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.8);
         }
 
-        /* İlgi Alanları Izgarası */
-        .hobbies-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
+        footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 0.75rem;
+            opacity: 0.6;
         }
+    </style>
+</head>
+<body>
 
-        .card {
-            background: var(--bg-color);
-            padding: 1.5rem;
-            border-radius: 6px;
-            border-left: 4px solid var(--secondary-color);
-        }
+    <div class="content">
+        <h1>ADS 352</h1>
+        <h2>Açık Kaynak Yazılım Geliştirme Dersi</h2>
+        
+        <p>Merhaba! Ben <strong>Adın</strong>. Bu site ADS 352 Açık Kaynak Yazılım Geliştirme dersi için<br>oluşturulmuştur.</p>
+        
+        <div class="links">
+            <a href="mailto:ornek@email.com" class="link-btn"><i class="fa-regular fa-envelope"></i> E-posta</a>
+            <a href="#" class="link-btn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            <a href="#" class="link-btn"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="#" class="link-btn"><i class="fa-brands fa-instagram"></i> Instagram</a>
+        </div>
+    </div>
 
-        .card h3 {
-            margin-bottom: 0.5rem;
-            color: var(--primary-color);
-            font-size
+    <footer>
+        &copy; 2025 ADS 352. Tüm hakları saklıdır.
+    </footer>
+
+</body>
+</html>
